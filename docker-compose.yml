@@ -1,0 +1,28 @@
+volumes:
+  letsencrypt: {}
+  lib_letsencrypt: {}
+
+services:
+  nginx:
+    pull_policy: build
+    build:
+      dockerfile: ./nginx/Dockerfile
+      context: .
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - letsencrypt:/etc/letsencrypt:ro
+      - lib_letsencrypt:/vap/lib/letsencrypt:ro
+  
+  certbot:
+    image: certbot/certbot
+    command:
+      certonly --standalone -n --agree-tos --email $LE_EMAIL
+        --domain ftambara.site
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - letsencrypt:/etc/letsencrypt
+      - lib_letsencrypt:/vap/lib/letsencrypt
