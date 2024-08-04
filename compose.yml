@@ -14,8 +14,9 @@ services:
     volumes:
       - letsencrypt:/etc/letsencrypt:ro
       - lib_letsencrypt:/vap/lib/letsencrypt:ro
-  
+ 
   certbot:
+    pull_policy: always
     image: certbot/certbot
     command:
       certonly --standalone -n --agree-tos --email $LE_EMAIL

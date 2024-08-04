@@ -1,0 +1,182 @@
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+textarea,
+select,
+input,
+progress {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+
+/* Global variables. */
+:root,
+::backdrop {
+    /* Fonts */
+    --sans-font: Avenir, "Nimbus Sans L", "Noto Sans", "Segoe UI", Helvetica, Arial, sans-serif;
+    --serif-font: Georgia, "Times New Roman", serif;
+    --mono-font: Menlo, Monaco, "Andale Mono", Consolas, monospace;
+
+    --standard-border-radius: 5px;
+
+    --sym-external: "data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20version%3D%221.1%22%20viewBox%3D%220%200%2022%2022%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23f00%22%3E%3Cpath%20d%3D%22m22%200v9.3333h-2.3333v-5.3515l-9.0918%209.093-1.6497-1.6497%209.0907-9.0918h-5.3492v-2.3333z%22%2F%3E%3Cpath%20d%3D%22m8.1667%204.5v2.3333h-5.8333v12.833h12.833v-5.8333h2.3333v7a1.1667%201.1667%200%200%201-1.1667%201.1667h-15.167a1.1667%201.1667%200%200%201-1.1667-1.1667v-15.167a1.1667%201.1667%200%200%201%201.1667-1.1667z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+
+    /* Light theme */
+    --bg: #fff;
+    --accent-bg: #f5f7ff;
+    --text: #212121;
+    --text-light: #585858;
+    --border: #898EA4;
+    --accent: #0d47a1;
+    --accent-hover: #1266e2;
+    --accent-text: var(--bg);
+    --code: #d81b60;
+    --preformatted: #444;
+    --marked: #ffdd33;
+    --disabled: #efefef;
+}
+
+/* Dark theme */
+@media (prefers-color-scheme: dark) {
+    :root,
+    ::backdrop {
+        color-scheme: dark;
+        --bg: #212121;
+        --accent-bg: #2b2b2b;
+        --text: #dcdcdc;
+        --text-light: #ababab;
+        --accent: #ffb300;
+        --accent-hover: #ffe099;
+        --accent-text: var(--bg);
+        --code: #f06292;
+        --preformatted: #ccc;
+        --disabled: #111;
+    }
+    /* Add a bit of transparency so light media isn't so glaring in dark mode */
+    img,
+    video {
+        opacity: 0.8;
+    }
+}
+
+/* Global styles */
+html {
+    font-family: var(--serif-font);
+    scroll-behavior: auto;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Make the body a nice central block */
+body {
+    color: var(--text);
+    background-color: var(--bg);
+    font-size: 1.15rem;
+    max-width: 900px;
+    margin: 1rem 2rem;
+}
+
+header {
+    margin-bottom: 1.4rem;
+}
+
+/* Format headings */
+h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+    margin-top: 1.5rem;
+}
+
+h3 {
+    font-size: 2rem;
+    margin-top: 1rem;
+}
+
+h4 {
+    font-size: 1.44rem;
+}
+
+p {
+    margin: 0.5rem 0;
+}
+
+/* Prevent long strings from overflowing container */
+p, h1, h2, h3, h4 {
+    overflow-wrap: break-word;
+}
+
+/* Fix line height when title wraps */
+h1,
+h2,
+h3 {
+    line-height: 1.1;
+}
+
+/* Reduce header size on smaller screens */
+@media only screen and (max-width: 720px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Format links */
+a:hover {
+    text-decoration: none;
+}
+
+/* Classes */
+.external::after {
+    background-color: var(--text);
+    content: "";
+    display: inline-flex;
+    margin-left: 0.2em;
+    -webkit-mask-image: url(--sym-external);
+    mask-image: url(--sym-external);
+    mask-size: cover;
+    width: 0.6em;
+    height: 0.6em;
+}

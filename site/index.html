@@ -3,36 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/styles.css">
     <title>Ftambara's website</title>
+    <meta name="description" content="Home page of Federico Tambara's website">
 </head>
 
 <body>
-    <h1>Federico Tambara</h1>
-    <p>
-        I am Federico Tambara, a software developer from Argentina.
-        This website is a multi-purpose project, with which I intend to 
-        accomplish the following goals:
+    <header>
+        <h1>Federico Tambara's website</h1>
+        <nav></nav>
+    </header>
+    <main>
+        <p>Hello World</p>
         <ul>
-            <li>
-                Instead of using a PaaS solution, I want to host my own
-                simple website, learning as much as possible in the process
-            </li>
-            <li>
-                Motivate the study of underlying web protocols- TCP, IP, HTTP- 
-                and web technologies- HTML, CSS, and JavaScript, DNS, CDNs
-            </li>
-            <li>
-                Develop a Go web server
-            </li>
-            <li>
-                Provide a platform for my personal projects
-            </li>
-            <li>
-                Use a bit of vanilla JavaScript
-            </li>
+            <li><a class="external" href="https://github.com/ftambara">GitHub</a></li>
         </ul>
-    </p>
-    <p>
-        This is only the beginning, stay tuned.
-    </p>
+    </main>
+    <footer>
+        <p>This page loaded in <span id="loadtime"></span> ms</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("loadtime").innerHTML = performance.now();
+        });
+    </script>
 </body>
