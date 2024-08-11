@@ -44,7 +44,7 @@ time, mark, audio, video {
 
     --standard-border-radius: 5px;
 
-    --sym-external: "data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20version%3D%221.1%22%20viewBox%3D%220%200%2022%2022%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23f00%22%3E%3Cpath%20d%3D%22m22%200v9.3333h-2.3333v-5.3515l-9.0918%209.093-1.6497-1.6497%209.0907-9.0918h-5.3492v-2.3333z%22%2F%3E%3Cpath%20d%3D%22m8.1667%204.5v2.3333h-5.8333v12.833h12.833v-5.8333h2.3333v7a1.1667%201.1667%200%200%201-1.1667%201.1667h-15.167a1.1667%201.1667%200%200%201-1.1667-1.1667v-15.167a1.1667%201.1667%200%200%201%201.1667-1.1667z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+    --sym-external: url("data:image/svg+xml,%3Csvg%20width%3D%2222%22%20height%3D%2222%22%20version%3D%221.1%22%20viewBox%3D%220%200%2022%2022%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22%23f00%22%3E%3Cpath%20d%3D%22m22%200v9.3333h-2.3333v-5.3515l-9.0918%209.093-1.6497-1.6497%209.0907-9.0918h-5.3492v-2.3333z%22%2F%3E%3Cpath%20d%3D%22m8.1667%204.5v2.3333h-5.8333v12.833h12.833v-5.8333h2.3333v7a1.1667%201.1667%200%200%201-1.1667%201.1667h-15.167a1.1667%201.1667%200%200%201-1.1667-1.1667v-15.167a1.1667%201.1667%200%200%201%201.1667-1.1667z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
 
     /* Light theme */
     --bg: #fff;
@@ -174,8 +174,8 @@ a:hover {
     content: "";
     display: inline-flex;
     margin-left: 0.2em;
-    -webkit-mask-image: url(--sym-external);
-    mask-image: url(--sym-external);
+    -webkit-mask-image: var(--sym-external);
+    mask-image: var(--sym-external);
     mask-size: cover;
     width: 0.6em;
     height: 0.6em;
