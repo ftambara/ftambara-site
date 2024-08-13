@@ -21,8 +21,10 @@ prod/deploy: no-dirty
 	@docker --context ftambara-site compose \
 		--project-directory $(PROJECT_DIR) \
 		--env-file .env \
+		--file compose.prod.yml \
 		build
 	@docker --context ftambara-site compose \
 		--project-directory $(PROJECT_DIR) \
 		--env-file .env \
+		--file compose.prod.yml \
 		up -d nginx
