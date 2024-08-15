@@ -3,15 +3,6 @@
   box-sizing: border-box;
 }
 
-textarea,
-select,
-input,
-progress {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-}
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
