@@ -1,32 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/styles.css">
+        <link rel="icon" href="favicon.svg">
+        <title>Ftambara's website</title>
+        <meta name="description" content="Home page of Federico Tambara's website">
+    </head>
+    <body>
+        <header>
+            <h1>Federico Tambara's website</h1>
+            <nav></nav>
+        </header>
+        <main>
+            <article>
+                <h2>Signal Processing</h2>
+                <p>
+                This will be an exploration of ideas in signal processing. Along the way, I will
+                make many mistakes and reinvent the wheel. That is by design. The purpose is to
+                have a fun project as an excuse to investigate concepts which could include
+                linear algebra, assembly, web, fourier transforms, signal processing itself,
+                among others.
+                </p>
+                <p>
+                The initial project will be an application of Nyquist's theorem of minimal
+                sampling rate. To make things easier, I will work with a single channel on a
+                one-dimensional signal.
+                </p>
+                <p>
+                I think I lack deep knowledge in most of the areas I'm about to dive in. I hope
+                to look back in a few weeks and observe that to be no longer the case. Let's
+                have fun.
+                </p>
+                <h3>Why this project?</h3>
+                <p>It checks all the boxes!</p>
+                <input type="checkbox" name="interesting" checked>
+                <label for="interesting">Is interesting</label>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="static/styles.css">
-    <link rel="icon" href="favicon.svg">
-    <title>Ftambara's website</title>
-    <meta name="description" content="Home page of Federico Tambara's website">
-</head>
+                <input type="checkbox" name="recursive1" checked>
+                <label for="recursive1">Checks the box above</label>
 
-<body>
-    <header>
-        <h1>Federico Tambara's website</h1>
-        <nav></nav>
-    </header>
-    <main>
-        <p>Hello World</p>
-        <ul>
-            <li><a class="external" href="https://github.com/ftambara">GitHub</a></li>
-        </ul>
-    </main>
-    <footer>
-        <p>This page loaded in <span id="loadtime"></span> ms</p>
-    </footer>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.getElementById("loadtime").innerHTML = performance.now();
-        });
-    </script>
-</body>
+                <input type="checkbox" name="recursive2" checked>
+                <label for="recursive2">Checks the box above</label>
+            </article>
+            <ul>
+                <li><a class="external" href="https://github.com/ftambara">GitHub</a></li>
+            </ul>
+        </main>
+        <footer>
+            <p>This page loaded in <span id="loadtime"></span> ms</p>
+        </footer>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.getElementById("loadtime").innerHTML = performance.now();
+            });
+        </script>
+    </body>
+</html>
